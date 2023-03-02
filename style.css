@@ -44,13 +44,44 @@ transition: transform 0.3s;
 
 }
 .card {
-    width: 25rem;
+    width: 15rem;
+    position: relative;
     background-color: #a79a2d;
     padding: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    box-shadow: -0.1rem -0.1rem 0.1rem #000;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+.card::before {
+    content: "";
+    height: 100%;
+    width: 1rem;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    transform: skewY(45deg);
+    transform-origin: right;
+    background-color: #817824;
+    box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+.card::after {
+    content: "";
+    height: 1rem;
+    width: 100%;
+    background-color: #817824;
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    transform: skewX(45deg);
+    transform-origin: bottom;
+    box-shadow: -0.1rem -0.1rem 0.1rem #000;
+}
+.card:hover {
+    box-shadow: 2rem 2rem 2rem #000;
+    transform: translateX(-3rem);
 }
 .card-img {
     width: 100%;
@@ -59,12 +90,14 @@ transition: transform 0.3s;
     font-size: 2rem;
     font-weight: 900;
     color: #111;
+    margin: 2rem 0;
 }
 .card-btn {
     background-color: #111;
     color: #888;
     border-radius: 12px;
     font-size: 1.5rem;
-    cursor: pointer;
     padding: 0.5rem 0;
+    cursor: pointer;
+    padding: 0.5rem;
 }
