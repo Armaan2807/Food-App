@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
+
 <body>
     <div class="container">
         <!-- section-1 -->
@@ -47,19 +49,69 @@
                 </div>
             </div>
         </div>
+        <!-- Section 3 -->
+        <div class="section-3">
+            <h1 class="section-heading">Variety Of Foods</h1>
+            <div class="gallery">
+                <div class="food-card">
+                    <img src="./images/gallery-1.jpeg" alt="" class="food-img">
+                    <div class="food-name">Salads</div>
+                    <div class="food-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, provident quidem?
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="./images/gallery-2.jpeg" alt=""  class="food-img">
+                    <div class="food-name">Hamburger</div>
+                    <div class="food-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, provident quidem?
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="./images/gallery-3.jpeg" alt="" class="food-img">
+                    <div class="food-name">Salmans</div>
+                    <div class="food-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, provident quidem?
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="./images/gallery-4.jpeg" alt=""  class="food-img">
+                    <div class="food-name">Pancakes</div>
+                    <div class="food-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, provident quidem?
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="./images/gallery-5.jpeg" alt=""  class="food-img">
+                    <div class="food-name">Hummus</div>
+                    <div class="food-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, provident quidem?
+                    </div>
+                </div>
+                <div class="food-card">
+                    <img src="./images/gallery-6.jpeg" alt=""  class="food-img">
+                    <div class="food-name">CupCakes</div>
+                    <div class="food-desc">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, provident quidem?
+                    </div>
+                </div>
+                
+            </div>
+        </div>
     </div>
 </body>
- <script>
-    let icons=document.querySelector(".section-1-icons i")
-    let counter= 1;
- setInterval(function(){
-        let icon =document.querySelector(".section-1-icons .change")
+<script>
+    let icons = document.querySelector(".section-1-icons i")
+    let counter = 1;
+    setInterval(function () {
+        let icon = document.querySelector(".section-1-icons .change")
         icon.classList.remove("change")
         counter++;
         // if (counter < icons.length){
         icon.nextElementSibling.classList.add("change")
         // }
         // icons[0].classList.add("change")
-    },2000)
- </script>
+    }, 2000)
+</script>
+
 </html>

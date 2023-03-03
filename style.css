@@ -1,8 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
 * {
     padding: 0;
     margin: 0;
 }
+
 .section-1 {
     background-color: #333;
     height: 100vh;
@@ -12,23 +14,31 @@
     justify-content: space-evenly;
     align-items: center;
 }
+
 .section-heading {
+    font-size: 72px;
+    background: -webkit-linear-gradient(#eee, #31db92);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 8rem;
     font-weight: 900;
     text-align: center;
-    color: white;
+    /* color: white; */
 }
-.section-1-icons i{
-font-size: 25rem;
-color: #a79a2d;
-position: absolute;
-transform: translate(-50%,-50%) scale(0);
-transition: transform 0.3s;
+
+.section-1-icons i {
+    font-size: 25rem;
+    color: #a79a2d;
+    position: absolute;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s;
 }
+
 .section-1-icons i.change {
-    transform: translate(-50%,-50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     transition: transform 0.3s 0.3s;
 }
+
 .section-2 {
     width: 100%;
     height: 100vh;
@@ -38,11 +48,13 @@ transition: transform 0.3s;
     justify-content: space-between;
     padding: 5rem 0;
 }
+
 .cards-container {
     display: flex;
     justify-content: space-evenly;
 
 }
+
 .card {
     width: 15rem;
     position: relative;
@@ -54,7 +66,9 @@ transition: transform 0.3s;
     align-items: center;
     box-shadow: -0.1rem -0.1rem 0.1rem #000;
     transition: transform 0.5s, box-shadow 0.5s;
+    transform: rotateY(20deg) skewX(-2deg);
 }
+
 .card::before {
     content: "";
     height: 100%;
@@ -67,6 +81,7 @@ transition: transform 0.3s;
     background-color: #817824;
     box-shadow: -0.1rem -0.1rem 0.1rem #000;
 }
+
 .card::after {
     content: "";
     height: 1rem;
@@ -79,19 +94,24 @@ transition: transform 0.3s;
     transform-origin: bottom;
     box-shadow: -0.1rem -0.1rem 0.1rem #000;
 }
+
 .card:hover {
     box-shadow: 2rem 2rem 2rem #000;
     transform: translateX(-3rem);
 }
+
 .card-img {
     width: 100%;
+
 }
+
 .card-name {
     font-size: 2rem;
     font-weight: 900;
     color: #111;
     margin: 2rem 0;
 }
+
 .card-btn {
     background-color: #111;
     color: #888;
@@ -100,4 +120,96 @@ transition: transform 0.3s;
     padding: 0.5rem 0;
     cursor: pointer;
     padding: 0.5rem;
+}
+
+.section-3 {
+    background-color: #333;
+    padding: 4rem 0;
+}
+
+.gallery {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.food-card {
+    margin: 4rem 1rem;
+    position: relative;
+}
+.food-card::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: .1rem;
+    height: 0%;
+    left: 80%;
+    top: 2vw;
+    transition: height 0.5s
+}
+.food-card:hover::before {
+    height: 80%;
+}
+.food-card::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 0%;
+    height: 0.1rem;
+    top: 30%;
+    left: 2rem;
+    transition: width 0.5s;
+}
+.food-card:hover::after {
+    width: 80%;
+}
+.food-card:hover .food-name {
+width: 100%;
+transition: width 1.5s 0.5s;
+}
+.food-img {
+    width: 24vw;
+    height: 15vw;
+    object-fit: cover;
+    box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946,
+        0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+    transition: all 0.5s;
+}
+.food-card:hover .food-img {
+    box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946,
+    3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
+    opacity: 0.5s;
+    transform: scale(1.1);
+    filter: blur(0.5rem);
+}
+.food-name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position:absolute;
+    top: 2rem;
+    left: 2rem;
+    letter-spacing: 0.1rem;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.3s;
+}
+.food-desc {
+    color: white ;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 3vw;
+    left :2rem;
+    font-weight: 300;
+    width: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+.food-card:hover .food-desc {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s 1s;
 }
