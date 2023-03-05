@@ -213,3 +213,57 @@ transition: width 1.5s 0.5s;
     visibility: visible;
     transition: opacity 1s 1s;
 }
+.section-4 {
+width: 100%;
+height: 30vh;
+background-color: #222;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 2rem 0;
+}
+.section-4-heading {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #a79a2d;
+}
+.section-4-desc {
+    color: #888;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+}
+.right-part {
+    display: flex;
+    align-items: center;
+}
+.signup-input {
+    width: 30rem;
+    height: 4rem;
+    color:#a79a2d ;
+    border: 0.2rem solid #a79a2d;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+}
+.signup-btn {
+    background-color: #333;
+    color: #a79a2d;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    left:-4rem;
+    height: 3.5rem;
+    width: 3.5rem; 
+}
+.section-5 {
+    background-color: #222;
+}
+.copyright {
+color: #eee;
+font-size: 1.5rem;
+border-top: 0.1rem solid #888 ; 
+padding: 2rem;
+width: 100%;
+text-align: center;
+letter-spacing: 0.1rem;
+}
