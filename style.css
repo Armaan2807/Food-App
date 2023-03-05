@@ -3,6 +3,11 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
 }
 .navbar {
     display: flex;
@@ -30,19 +35,39 @@
 .nav-item i {
     font-size:3rem;
 }
-.menu {
-    background-color: white;
-    width: 4rem;
-    height: 6rem;
-    z-index: 30;
-    cursor: pointer;
-}
+
 .name {
     font-size: 1rem;
     font-weight: 900;
     margin-top: 0.25rem;
     letter-spacing: 0.3rem;
 }
+.menu {
+    width: 40px;
+    height: 60px;
+    background-color: #000;
+    z-index: 300;
+    position: fixed ;
+    top: 15rem;
+    left: 5rem;
+    border-radius: 30rem 30rem 15rem 15rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem #000, -0.1rem -0.1rem 0.1rem #000;
+  cursor: pointer;
+  z-index: 100;
+  transition: top 0.4s 0.2s;
+}
+
+.menu::before {
+    content: "";
+    width: 0.3rem;
+    height: 15rem;
+    background-color: #000;
+    position: absolute;
+    top: -15rem;
+    left: calc(50% - 0.15rem);
+    box-shadow: 0.1rem 0rem 0.1rem #000;
+    /* transition: all 0.4s; */
+  }
 .section-1 {
     background-color: #333;
     height: 100vh;
