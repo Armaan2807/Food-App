@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meals</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div class="navbar">
+        <a class="nav-item" href="/Index.html"><i class="fas fa-home"></i> <span class="name">Home</span></a>
+        <a class="nav-item" href="/meals.html"> <i class="fas fa-utensils"></i> <span class="name">Meals</span></a>
+        <a class="nav-item" href="/contact.html"> <i class="fas fa-blender-phone"></i> <span class="name">Contact</span></a>
+    </div>
+    <div class="menu">
+    </div>
+    <div class="container">
+        <div class="section-1"></div>
+    </div>
+</body>
+</html>
+<script>
+    let icons = document.querySelector(".section-1-icons i")
+    let counter = 1;
+    setInterval(function () {
+        let icon = document.querySelector(".section-1-icons .change")
+        icon.classList.remove("change")
+        counter++;
+        // if (counter < icons.length){
+        icon.nextElementSibling.classList.add("change")
+        // }
+        // icons[0].classList.add("change")
+    }, 2000)
+    document.querySelector(".menu").addEventListener("click",()=>{
+        document.querySelector(".navbar").classList.toggle("change")
+        document.querySelector(".menu").classList.toggle("change")
+    })
+</script>
+
+</html>
