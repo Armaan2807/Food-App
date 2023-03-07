@@ -370,4 +370,7 @@ letter-spacing: 0.1rem;
 .right-part {
     margin-top: 2rem;
 }
+.menu {
+    left: 3rem;
+}
 }
